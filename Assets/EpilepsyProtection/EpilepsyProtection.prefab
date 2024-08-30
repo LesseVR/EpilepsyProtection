@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1256795984647684639}
   - component: {fileID: 8082562227630803827}
   - component: {fileID: 5570658060306874545}
-  - component: {fileID: 7601267084415895916}
+  - component: {fileID: 3634482666001708569}
   - component: {fileID: 3440165330114673192}
   - component: {fileID: 4662584344763408864}
   - component: {fileID: 8853389339180227243}
@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3754062393411330434}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -1.2924722e-26, z: -3.8774258e-26, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.84112966, y: 0.6912076, z: 0.6358224}
   m_ConstrainProportionsScale: 0
@@ -90,133 +90,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7601267084415895916
-MonoBehaviour:
+--- !u!1773428102 &3634482666001708569
+ParentConstraint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3754062393411330434}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 575728033, guid: 58e2f01a24261a14cb82e6d3399e8b16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsActive: 0
-  GlobalWeight: 1
-  TargetTransform: {fileID: 0}
-  SolveInLocalSpace: 0
-  FreezeToWorld: 0
-  RebakeOffsetsWhenUnfrozen: 0
-  Locked: 1
-  Sources:
-    source0:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: -0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source1:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source2:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source3:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source4:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source5:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source6:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source7:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source8:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source9:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source10:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source11:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source12:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source13:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source14:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    source15:
-      SourceTransform: {fileID: 0}
-      Weight: 1
-      ParentPositionOffset: {x: 0, y: 0, z: 0}
-      ParentRotationOffset: {x: 0, y: 0, z: 0}
-      _defaultsApplied: 1
-    totalLength: 1
-    overflowList: []
-  cachedExecutionGroupIndex: 0
-  PositionAtRest: {x: -1.2661913e-30, y: 18.451273, z: 2.5744}
-  AffectsPositionX: 1
-  AffectsPositionY: 1
-  AffectsPositionZ: 1
-  RotationAtRest: {x: -0, y: -1.4810641e-24, z: -4.4432026e-24}
-  AffectsRotationX: 1
-  AffectsRotationY: 1
-  AffectsRotationZ: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 1.1532052, z: 0.16799995}
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffsets:
+  - {x: 0, y: 0, z: 0.16799638}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 0
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
 --- !u!114 &3440165330114673192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1008.0
+  vrcfuryVersion: 1.1013.0
   somethingIsBroken: 0
   config:
     features: []
@@ -249,7 +149,7 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/Icons/ep_icon_main.png
+          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/EpilepsyProtection/EPToggleIcon.png
           objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
 --- !u!114 &4662584344763408864
 MonoBehaviour:
@@ -265,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1008.0
+  vrcfuryVersion: 1.1013.0
   somethingIsBroken: 0
   config:
     features: []
@@ -297,7 +197,7 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/Icons/ep_icon_main.png
+          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/EpilepsyProtection/EPToggleIcon.png
           objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
         enableDriveGlobalParam: 0
         driveGlobalParam: 
@@ -346,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1008.0
+  vrcfuryVersion: 1.1013.0
   somethingIsBroken: 0
   config:
     features: []
@@ -379,7 +279,7 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/Icons/ep_icon_main.png
+          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/EpilepsyProtection/EPToggleIcon.png
           objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
         enableDriveGlobalParam: 0
         driveGlobalParam: 
@@ -431,7 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1008.0
+  vrcfuryVersion: 1.1013.0
   somethingIsBroken: 0
   config:
     features: []
@@ -464,7 +364,7 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/Icons/ep_icon_main.png
+          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/EpilepsyProtection/EPToggleIcon.png
           objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
         enableDriveGlobalParam: 0
         driveGlobalParam: 
@@ -516,7 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1008.0
+  vrcfuryVersion: 1.1013.0
   somethingIsBroken: 0
   config:
     features: []
@@ -549,7 +449,7 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/Icons/ep_icon_main.png
+          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/EpilepsyProtection/EPToggleIcon.png
           objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
         enableDriveGlobalParam: 0
         driveGlobalParam: 
@@ -601,7 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1008.0
+  vrcfuryVersion: 1.1013.0
   somethingIsBroken: 0
   config:
     features: []
@@ -634,7 +534,7 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/Icons/ep_icon_main.png
+          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/EpilepsyProtection/EPToggleIcon.png
           objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
         enableDriveGlobalParam: 0
         driveGlobalParam: 
