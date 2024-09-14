@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 1256795984647684639}
   - component: {fileID: 8082562227630803827}
   - component: {fileID: 5570658060306874545}
-  - component: {fileID: 3634482666001708569}
   - component: {fileID: 3440165330114673192}
-  - component: {fileID: 4662584344763408864}
-  - component: {fileID: 8853389339180227243}
-  - component: {fileID: 4241748910075341362}
-  - component: {fileID: 7335874442462796000}
   - component: {fileID: 7248396588098399633}
+  - component: {fileID: 8853389339180227243}
+  - component: {fileID: 7335874442462796000}
+  - component: {fileID: 4241748910075341362}
+  - component: {fileID: 4662584344763408864}
+  - component: {fileID: 3733492796045746825}
   m_Layer: 0
   m_Name: EpilepsyProtection
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.84112966, y: 0.6912076, z: 0.6358224}
+  m_LocalScale: {x: 0.39505336, y: 0.32463947, z: 0.29862672}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,33 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1773428102 &3634482666001708569
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3754062393411330434}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 1.1532052, z: 0.16799995}
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_TranslationOffsets:
-  - {x: 0, y: 0, z: 0.16799638}
-  m_RotationOffsets:
-  - {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_Active: 0
-  m_IsLocked: 1
-  m_Sources:
-  - sourceTransform: {fileID: 0}
-    weight: 1
 --- !u!114 &3440165330114673192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +124,7 @@ MonoBehaviour:
           guid: 
           id: 3e497c7129e08fb43903aa9bf661b47e|Assets/EpilepsyProtection/EPToggleIcon.png
           objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
---- !u!114 &4662584344763408864
+--- !u!114 &7248396588098399633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,19 +143,20 @@ MonoBehaviour:
   config:
     features: []
   content:
-    rid: 7589742444598788096
+    rid: 7589742460542910466
   references:
     version: 2
     RefIds:
-    - rid: 7589742444598788096
+    - rid: 7589742460542910466
       type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 3
-        name: EP/Activate
+        name: EP/Night Mode
         state:
-          actions: []
-        saved: 1
-        slider: 0
+          actions:
+          - rid: 7589742460542910467
+        saved: 0
+        slider: 1
         sliderInactiveAtZero: 0
         securityEnabled: 0
         defaultOn: 0
@@ -201,10 +175,9 @@ MonoBehaviour:
           objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
         enableDriveGlobalParam: 0
         driveGlobalParam: 
-        separateLocal: 1
+        separateLocal: 0
         localState:
-          actions:
-          - rid: 7589742444598788097
+          actions: []
         hasTransition: 0
         transitionStateIn:
           actions: []
@@ -219,19 +192,23 @@ MonoBehaviour:
         localTransitionTimeIn: 0
         localTransitionTimeOut: 0
         simpleOutTransition: 1
-        defaultSliderValue: 0
+        defaultSliderValue: 1
         useGlobalParam: 0
         globalParam: 
         holdButton: 0
         invertRestLogic: 0
-    - rid: 7589742444598788097
-      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+    - rid: 7589742460542910467
+      type: {class: MaterialPropertyAction, ns: VF.Model.StateAction, asm: VRCFury}
       data:
-        version: 1
+        version: 0
         desktopActive: 0
         androidActive: 0
-        obj: {fileID: 3754062393411330434}
-        mode: 0
+        renderer: {fileID: 5570658060306874545}
+        affectAllMeshes: 0
+        propertyName: _NightMode
+        value: 1
+        valueVector: {x: 0, y: 0, z: 0, w: 0}
+        valueColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &8853389339180227243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +236,7 @@ MonoBehaviour:
       type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 3
-        name: EP/Max Threshold
+        name: EP/Blackout Softness
         state:
           actions:
           - rid: 7589742444598788099
@@ -313,92 +290,7 @@ MonoBehaviour:
         androidActive: 0
         renderer: {fileID: 5570658060306874545}
         affectAllMeshes: 0
-        propertyName: _MaxThreshold
-        value: 1
-        valueVector: {x: 0, y: 0, z: 0, w: 0}
-        valueColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &4241748910075341362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3754062393411330434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 3
-  unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1013.0
-  somethingIsBroken: 0
-  config:
-    features: []
-  content:
-    rid: 7589742444598788098
-  references:
-    version: 2
-    RefIds:
-    - rid: 7589742444598788098
-      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
-      data:
-        version: 3
-        name: EP/Min Threshold
-        state:
-          actions:
-          - rid: 7589742444598788099
-        saved: 1
-        slider: 1
-        sliderInactiveAtZero: 0
-        securityEnabled: 0
-        defaultOn: 0
-        includeInRest: 0
-        exclusiveOffState: 0
-        enableExclusiveTag: 0
-        exclusiveTag: 
-        resetPhysbones: []
-        hasExitTime: 0
-        enableIcon: 1
-        icon:
-          version: 1
-          fileID: 0
-          guid: 
-          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/EpilepsyProtection/EPToggleIcon.png
-          objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
-        enableDriveGlobalParam: 0
-        driveGlobalParam: 
-        separateLocal: 0
-        localState:
-          actions: []
-        hasTransition: 0
-        transitionStateIn:
-          actions: []
-        transitionStateOut:
-          actions: []
-        transitionTimeIn: 0
-        transitionTimeOut: 0
-        localTransitionStateIn:
-          actions: []
-        localTransitionStateOut:
-          actions: []
-        localTransitionTimeIn: 0
-        localTransitionTimeOut: 0
-        simpleOutTransition: 1
-        defaultSliderValue: 0.25
-        useGlobalParam: 0
-        globalParam: 
-        holdButton: 0
-        invertRestLogic: 0
-    - rid: 7589742444598788099
-      type: {class: MaterialPropertyAction, ns: VF.Model.StateAction, asm: VRCFury}
-      data:
-        version: 0
-        desktopActive: 0
-        androidActive: 0
-        renderer: {fileID: 5570658060306874545}
-        affectAllMeshes: 0
-        propertyName: _MinThreshold
+        propertyName: _Softness
         value: 1
         valueVector: {x: 0, y: 0, z: 0, w: 0}
         valueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -487,7 +379,7 @@ MonoBehaviour:
         value: 1
         valueVector: {x: 0, y: 0, z: 0, w: 0}
         valueColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &7248396588098399633
+--- !u!114 &4241748910075341362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -506,19 +398,19 @@ MonoBehaviour:
   config:
     features: []
   content:
-    rid: 7589742460542910466
+    rid: 7589742444598788098
   references:
     version: 2
     RefIds:
-    - rid: 7589742460542910466
+    - rid: 7589742444598788098
       type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 3
-        name: EP/Night Mode
+        name: EP/Threshold
         state:
           actions:
-          - rid: 7589742460542910467
-        saved: 0
+          - rid: 7589742444598788099
+        saved: 1
         slider: 1
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -555,12 +447,12 @@ MonoBehaviour:
         localTransitionTimeIn: 0
         localTransitionTimeOut: 0
         simpleOutTransition: 1
-        defaultSliderValue: 1
+        defaultSliderValue: 0.5
         useGlobalParam: 0
         globalParam: 
         holdButton: 0
         invertRestLogic: 0
-    - rid: 7589742460542910467
+    - rid: 7589742444598788099
       type: {class: MaterialPropertyAction, ns: VF.Model.StateAction, asm: VRCFury}
       data:
         version: 0
@@ -568,7 +460,115 @@ MonoBehaviour:
         androidActive: 0
         renderer: {fileID: 5570658060306874545}
         affectAllMeshes: 0
-        propertyName: _NightMode
+        propertyName: _Threshold
         value: 1
         valueVector: {x: 0, y: 0, z: 0, w: 0}
         valueColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &4662584344763408864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3754062393411330434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1013.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 7589742444598788096
+  references:
+    version: 2
+    RefIds:
+    - rid: 7589742444598788096
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: EP/Activate
+        state:
+          actions: []
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 1
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/EpilepsyProtection/EPToggleIcon.png
+          objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 1
+        localState:
+          actions:
+          - rid: 7589742444598788097
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+    - rid: 7589742444598788097
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        obj: {fileID: 3754062393411330434}
+        mode: 0
+--- !u!114 &3733492796045746825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3754062393411330434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1013.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 7429561745382309968
+  references:
+    version: 2
+    RefIds:
+    - rid: 7429561745382309968
+      type: {class: ShowInFirstPerson, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 0

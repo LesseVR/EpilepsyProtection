@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 5000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -66,19 +66,24 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FadeDistanceMax: 0.25
+    - _FadeDistanceMin: 0.25
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _MaxThreshold: 0.1
+    - _HideAfterDistance: 0.25
+    - _MaxThreshold: 0.05
     - _Metallic: 0
-    - _MinThreshold: 0.05
+    - _MinThreshold: 0.01
     - _Mode: 0
-    - _NightMode: 0.1
+    - _NightMode: 0.025
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
+    - _Softness: 0.05
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Threshold: 0.01
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
