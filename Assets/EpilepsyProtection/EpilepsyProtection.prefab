@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7248396588098399633}
   - component: {fileID: 8853389339180227243}
   - component: {fileID: 7335874442462796000}
+  - component: {fileID: 4702026036797435338}
   - component: {fileID: 4241748910075341362}
   - component: {fileID: 4662584344763408864}
   - component: {fileID: 3733492796045746825}
@@ -35,7 +36,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.39505336, y: 0.32463947, z: 0.29862672}
+  m_LocalScale: {x: 0.6510679, y: 0.53502226, z: 0.49215195}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -104,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1013.0
+  vrcfuryVersion: 1.1142.0
   somethingIsBroken: 0
   config:
     features: []
@@ -138,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1013.0
+  vrcfuryVersion: 1.1142.0
   somethingIsBroken: 0
   config:
     features: []
@@ -155,7 +156,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 7589742460542910467
-        saved: 0
+        saved: 1
         slider: 1
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -197,15 +198,20 @@ MonoBehaviour:
         globalParam: 
         holdButton: 0
         invertRestLogic: 0
+        expandIntoTransition: 1
     - rid: 7589742460542910467
       type: {class: MaterialPropertyAction, ns: VF.Model.StateAction, asm: VRCFury}
       data:
-        version: 0
+        version: 2
         desktopActive: 0
         androidActive: 0
-        renderer: {fileID: 5570658060306874545}
+        localOnly: 0
+        remoteOnly: 0
+        renderer: {fileID: 0}
+        renderer2: {fileID: 3754062393411330434}
         affectAllMeshes: 0
         propertyName: _NightMode
+        propertyType: 0
         value: 1
         valueVector: {x: 0, y: 0, z: 0, w: 0}
         valueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -223,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1013.0
+  vrcfuryVersion: 1.1142.0
   somethingIsBroken: 0
   config:
     features: []
@@ -277,20 +283,25 @@ MonoBehaviour:
         localTransitionTimeIn: 0
         localTransitionTimeOut: 0
         simpleOutTransition: 1
-        defaultSliderValue: 0.5
+        defaultSliderValue: 0.25
         useGlobalParam: 0
         globalParam: 
         holdButton: 0
         invertRestLogic: 0
+        expandIntoTransition: 1
     - rid: 7589742444598788099
       type: {class: MaterialPropertyAction, ns: VF.Model.StateAction, asm: VRCFury}
       data:
-        version: 0
+        version: 2
         desktopActive: 0
         androidActive: 0
-        renderer: {fileID: 5570658060306874545}
+        localOnly: 0
+        remoteOnly: 0
+        renderer: {fileID: 0}
+        renderer2: {fileID: 3754062393411330434}
         affectAllMeshes: 0
         propertyName: _Softness
+        propertyType: 0
         value: 1
         valueVector: {x: 0, y: 0, z: 0, w: 0}
         valueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -308,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1013.0
+  vrcfuryVersion: 1.1142.0
   somethingIsBroken: 0
   config:
     features: []
@@ -329,7 +340,7 @@ MonoBehaviour:
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
-        defaultOn: 0
+        defaultOn: 1
         includeInRest: 0
         exclusiveOffState: 0
         enableExclusiveTag: 0
@@ -367,15 +378,110 @@ MonoBehaviour:
         globalParam: 
         holdButton: 0
         invertRestLogic: 0
+        expandIntoTransition: 1
     - rid: 7589742460542910465
       type: {class: MaterialPropertyAction, ns: VF.Model.StateAction, asm: VRCFury}
       data:
-        version: 0
+        version: 2
         desktopActive: 0
         androidActive: 0
-        renderer: {fileID: 5570658060306874545}
+        localOnly: 0
+        remoteOnly: 0
+        renderer: {fileID: 0}
+        renderer2: {fileID: 3754062393411330434}
         affectAllMeshes: 0
         propertyName: _Blackout
+        propertyType: 0
+        value: 1
+        valueVector: {x: 0, y: 0, z: 0, w: 0}
+        valueColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &4702026036797435338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3754062393411330434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1142.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 4772830880605667352
+  references:
+    version: 2
+    RefIds:
+    - rid: 4772830880605667352
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: EP/Clamp HDR
+        state:
+          actions:
+          - rid: 4772830880605667353
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 1
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 1
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 3e497c7129e08fb43903aa9bf661b47e|Assets/EpilepsyProtection/EPToggleIcon.png
+          objRef: {fileID: 2800000, guid: 3e497c7129e08fb43903aa9bf661b47e, type: 3}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 4772830880605667353
+      type: {class: MaterialPropertyAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 2
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        renderer: {fileID: 0}
+        renderer2: {fileID: 3754062393411330434}
+        affectAllMeshes: 0
+        propertyName: _ClampHDR
+        propertyType: 0
         value: 1
         valueVector: {x: 0, y: 0, z: 0, w: 0}
         valueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -393,7 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1013.0
+  vrcfuryVersion: 1.1142.0
   somethingIsBroken: 0
   config:
     features: []
@@ -447,20 +553,25 @@ MonoBehaviour:
         localTransitionTimeIn: 0
         localTransitionTimeOut: 0
         simpleOutTransition: 1
-        defaultSliderValue: 0.5
+        defaultSliderValue: 0.25
         useGlobalParam: 0
         globalParam: 
         holdButton: 0
         invertRestLogic: 0
+        expandIntoTransition: 1
     - rid: 7589742444598788099
       type: {class: MaterialPropertyAction, ns: VF.Model.StateAction, asm: VRCFury}
       data:
-        version: 0
+        version: 2
         desktopActive: 0
         androidActive: 0
-        renderer: {fileID: 5570658060306874545}
+        localOnly: 0
+        remoteOnly: 0
+        renderer: {fileID: 0}
+        renderer2: {fileID: 3754062393411330434}
         affectAllMeshes: 0
         propertyName: _Threshold
+        propertyType: 0
         value: 1
         valueVector: {x: 0, y: 0, z: 0, w: 0}
         valueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -478,7 +589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1013.0
+  vrcfuryVersion: 1.1142.0
   somethingIsBroken: 0
   config:
     features: []
@@ -537,12 +648,15 @@ MonoBehaviour:
         globalParam: 
         holdButton: 0
         invertRestLogic: 0
+        expandIntoTransition: 1
     - rid: 7589742444598788097
       type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
       data:
         version: 1
         desktopActive: 0
         androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
         obj: {fileID: 3754062393411330434}
         mode: 0
 --- !u!114 &3733492796045746825
@@ -559,7 +673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1013.0
+  vrcfuryVersion: 1.1142.0
   somethingIsBroken: 0
   config:
     features: []

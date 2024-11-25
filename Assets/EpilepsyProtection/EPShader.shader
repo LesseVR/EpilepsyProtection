@@ -6,6 +6,8 @@
         _Softness ("Softness", Range(0.05, 1.0)) = 1.0
         [Toggle]
         _Blackout ("Blackout", Float) = 0
+        [Toggle]
+        _ClampHDR ("Clamp HDR", Float) = 0
         _NightMode ("Night Mode", Range(0.025, 1.0)) = 1.0
         _HideAfterDistance ("Hide After Distance", Float) = 0.25
     }
@@ -33,6 +35,7 @@
             float _Threshold;
             float _Softness;
             float _Blackout;
+            float _ClampHDR;
             float _NightMode;
             float _HideAfterDistance;
 
@@ -60,7 +63,11 @@
             fixed4 frag(v2f i) : SV_Target
             {
                 float4 col = tex2Dproj(_BackgroundTexture, i.grabPos);
-                float4 original = col;
+                //float4 original = col;
+
+                if (_ClampHDR == 1) {
+                    col = saturate(col);
+                }
 
                 float lumMin = _Threshold;
                 float lumMax = _Threshold + ((1.0 - _Threshold) * _Softness);
