@@ -283,7 +283,7 @@ MonoBehaviour:
         localTransitionTimeIn: 0
         localTransitionTimeOut: 0
         simpleOutTransition: 1
-        defaultSliderValue: 0.25
+        defaultSliderValue: 0.1
         useGlobalParam: 0
         globalParam: 
         holdButton: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
-        defaultOn: 1
+        defaultOn: 0
         includeInRest: 0
         exclusiveOffState: 0
         enableExclusiveTag: 0
@@ -553,7 +553,7 @@ MonoBehaviour:
         localTransitionTimeIn: 0
         localTransitionTimeOut: 0
         simpleOutTransition: 1
-        defaultSliderValue: 0.25
+        defaultSliderValue: 0.2
         useGlobalParam: 0
         globalParam: 
         holdButton: 0
